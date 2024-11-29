@@ -1,6 +1,6 @@
 title: Researcher
-url: "https://li-cr.github.io/show"
-baseurl: "/"
+url: "https://li-cr.github.io"
+baseurl: "/show"
 
 remote_theme: ankitsultana/researcher@gem
 
