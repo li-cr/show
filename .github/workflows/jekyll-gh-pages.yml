@@ -49,3 +49,14 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Deploy to gh-pages branch
+        run: |
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git init
+            git add -A
+            git commit -m "Deploy Jekyll site to gh-pages branch"
+            git branch -M gh-pages
+            git remote add origin https://github.com/${{ github.repository }}.git
+            git push -f origin gh-pages
